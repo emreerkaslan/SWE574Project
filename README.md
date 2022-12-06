@@ -41,3 +41,10 @@ Env file should also be configured to use the system. Update the file like below
 If you will run the system without docker, DB_NAME part can have CommUnitySocial, but for Docker, it should be communitysocial. 
 
 To create the database for Docker, some commands should also be run. Firstly, create a database on your local machine. Run the following command to build the Docker images: ```docker-compose up --build``` Then, to start the database: ```docker-compose start db``` Because the db is defined as core_db, run the following command: ```docker exec -it core_db bash``` The creation process should be started by the following: ```psql -U postgres``` Database should be created: ```CREATE DATABASE communitysocial;``` Run the following commands: ```\l```, ```\q``` You can exit from there by typing: ```exit``` Run the images for Docker: ```docker-compose up``` If you want it to run on the background: ```docker-compose up -d``` The system can be reachable from http://127.0.0.1:80/ link. The “python manage.py runserver” command is not needed to be run because it is written in the Dockerfile. All needed commands to do migrations for the database are also written there.
+
+
+![Sort Services](https://user-images.githubusercontent.com/67108859/205984559-9dd331a6-16ba-4e63-825b-34a5324e2c24.png)
+
+![Dashboard General](https://user-images.githubusercontent.com/67108859/205984552-c0626952-4709-44ff-829e-42b8b3b97ab6.png)
+
+![Services](https://user-images.githubusercontent.com/67108859/205984557-46c9d2ec-cac3-4e71-9d9a-9886fc268131.png)
